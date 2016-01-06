@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ga_sessionTimeout">300</integer>
+    <string name="ga_logLevel">verbose</string>
+    <bool name="ga_autoActivityTracking">true</bool>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+    <integer name="ga_dispatchPeriod">1</integer>
+    <bool name="ga_dryRun">false</bool>
+<!--     <screenName name="com.cls.sugutomo.userlist.UserListActivity">
+        User list  Screen
+    </screenName>
+   <screenName name="com.cls.sugutomo.BuyPointActivity">
+        Buy Point Screen
+    </screenName>
+   <screenName name="com.cls.sugutomo.BuyVipActivity">
+        Buy Appeal Screen
+    </screenName> --> 
+    <string name="ga_trackingId">UA-60322866-1</string>
+</resources>

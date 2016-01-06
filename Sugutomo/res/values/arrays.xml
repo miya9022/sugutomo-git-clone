@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>ユーザー一覧</item>
+        <item>マップ表示</item>
+        <item>チャットリスト</item>
+        <item>一斉送信機能</item>
+        <item>お気に入りリスト</item>
+        <item>足あとリスト</item>
+        <item>所持ポイント＆追加購入</item>
+        <item>人気ユーザーランキング</item>
+        <item>アピール購入</item>
+        <item>Q＆A</item>
+        <item>システムオプション</item>
+        <item>利用規約</item>
+        <item>プライバシーポリシー</item>
+        <item>google play で評価</item>
+        <item>ログアウト</item>
+        <item>お問い合わせ</item>
+    </string-array>
+    <string-array name="camera_option">
+        <item>カメラを起動</item>
+        <item>アルバムから選択</item>
+    </string-array>
+
+    <integer-array name="point_option">
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>500</item>
+        <item>700</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>5000</item>
+        <item>10000</item>
+    </integer-array>
+
+    <string-array name="other_option">
+        <item>このユーザーをお気に入りに登録</item>
+        <item>このユーザーをブロック</item>
+        <item>このユーザーを報告</item>
+    </string-array>
+    
+    <string-array name="other_option_2">
+        <item>このユーザーをブロック</item>
+        <item>このユーザーを報告</item>
+    </string-array>
+    
+    <string-array name="other_option_2_unblock">
+        <item>このユーザーのブロックを解除</item>
+        <item>このユーザーを報告</item>
+    </string-array>
+    
+    <string-array name="other_option_unfollow">
+        <item>@string/unfollow</item>
+        <item>このユーザーをブロック</item>
+        <item>このユーザーを報告</item>
+    </string-array>
+    <!-- CREATE PROFILE -->
+    <string-array name="create_profile_items">
+        <item>名前</item>
+        <item>性別</item>
+        <item>年齢</item>
+        <item>魅力的な会員と出会うには、以下も入力しましょう！</item>
+      <!--   <item>興味のある対象</item>
+        <item>身長</item>
+        <item>体制</item> -->
+    </string-array>
+        <string-array name="edit_profile_items">
+        <item>名前</item>
+        <item>性別</item>
+        <item>年齢</item>
+        <item>興味のある対象</item>
+        <item>身長</item>
+        <item>体制</item>
+    </string-array>
+    <string-array name="interested_partner_items">
+        <item>なし</item>
+        <item>男性</item>
+        <item>女性</item>
+        <item>両方</item>
+    </string-array>
+    <string-array name="body_figure_items">
+        <item>普通</item>
+        <item>すらりと</item>
+        <item>太い</item>
+    </string-array>
+    <string-array name="sexual_items_notboth">
+        <item>男性</item>
+        <item>女性</item>
+    </string-array>
+    <string-array name="sexual_items">
+        <item>男性</item>
+        <item>女性</item>
+    </string-array>
+    <string-array name="hobby_items">
+        <item>ドライブ</item>
+        <item>カラオケ</item>
+        <item>ゲーム</item>
+        <item>映画</item>
+        <item>お笑い</item>
+        <item>グルメ</item>
+        <item>お酒</item>
+        <item>その他</item>
+    </string-array>
+    <string-array name="fashion_items">
+        <item>シンプル系</item>
+        <item>派手系</item>
+        <item>格好系</item>
+    </string-array>
+    <string-array name="total_broastCast_item">
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+    </string-array>
+    <string-array name="setting_option">
+        <item>GPS</item>
+        <item>自分の位置情報表示</item>
+        <item>サウンド</item>
+        <item>バイブ</item>
+        <item>メールアドレス変更</item>
+        <item>パスワード変更</item>
+        <item>ログインパスワード</item>
+        <item>通知設定</item>
+        <item>アカウント削除</item>
+    </string-array>
+    <string-array name="setting_notify_option">
+        <item>チャット</item>
+        <item>画像がタップされた</item>
+        <item>サポートメッセージ</item>
+        <item>新規ユーザー</item>
+        <item>お気に入りに登録された</item>
+        <item>ビッグビュー通知</item>
+    </string-array>
+    <string-array name="setting_show_my_location_txt">
+        <item>0m</item>
+        <item>100m</item>
+        <item>200m</item>
+        <item>500m</item>
+        <item>1km</item>
+        <item>2km</item>
+        <item>5km</item>
+        <item>10km</item>
+    </string-array>
+    <string-array name="setting_show_my_location_value">
+        <item>0</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>5000</item>
+        <item>10000</item>
+    </string-array>
+    <string-array name="filter_timelogin_text">
+        <item>15分前</item>
+        <item>30分前</item>
+        <item>1時前</item>
+        <item>2時前</item>
+        <item>5時前</item>
+        <item>10時前</item>
+        <item>24時前</item>
+    </string-array>
+    <string-array name="filter_timelogin_value">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+        <item>600</item>
+        <item>1440</item>
+    </string-array>
+    <string-array name="filter_age_text">
+        <item>18歳</item>
+        <item>20歳</item>
+        <item>30歳</item>
+        <item>40歳</item>
+        <item>50歳</item>
+        <item>60歳</item>
+        <item>70歳</item>
+        <item>80歳</item>
+    </string-array>
+    <integer-array name="filter_age_value">
+        <item>18</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+    </integer-array>
+    <string-array name="dialog_notification_setting">
+        <item>新着メッセージ</item>
+        <item>サポートメッセージ</item>
+        <item>お気に入りに追加された</item>
+        <item>ランキングにランクインした</item>
+        <item>新規ユーザーが入った</item>
+    </string-array>
+    <!-- DELETE MESSAGE, CONVERSATION -->
+    <string-array name="list_item_message_option_normal">
+        <item>全削除</item>
+        <item>削除</item>
+    </string-array>
+    <string-array name="list_item_message_option_full">
+        <item>全削除</item>
+        <item>削除</item>
+        <item>再送</item>
+    </string-array>
+</resources>
+

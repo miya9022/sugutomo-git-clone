@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:orientation="vertical"
+    tools:ignore="contentDescription" >
+
+    <TextView
+        android:id="@+id/setting_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+<!-- limit the sizewith the maxLength attribute, limit it to a single line with maxLines attribute,
+ then use the ellipsize=end to add a "..." 
+ automatically to the end of any line that has been cut-off -->
+    <TextView
+        android:id="@+id/setting_value"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <CheckBox
+            android:id="@+id/setting_chkbox_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dip"
+            android:button="@drawable/checkbox"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/setting_push_notify_favorite"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:focusable="false" />
+    <CheckBox
+            android:id="@+id/setting_chkbox_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dip"
+            android:layout_toLeftOf="@id/setting_chkbox_right"
+            android:button="@drawable/checkbox"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/setting_push_notify_all"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:focusable="false" />
+
+</RelativeLayout>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.cls.sugutomo.ChatActivity$PlaceholderFragment"
+    tools:ignore="contentDescription" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/tile_bg"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ListView
+                android:id="@+id/listMessages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:isScrollContainer="false"
+                android:listSelector="@android:color/transparent"
+                android:scrollbarSize="10dp"
+                android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+                android:transcriptMode="alwaysScroll"
+                android:scrollbars="vertical" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#D9D7D7" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btn_chatOption"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/option_chat_icon"
+                android:onClick="onClick"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/showEmo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/emotion_icon"
+                android:onClick="onClick"
+                android:textStyle="bold" />
+
+            <com.rockerhieu.emojicon.EmojiconEditText
+                android:id="@+id/chatET"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="top"
+                android:hint="@string/btn_chatET"
+                android:drawableRight="@drawable/edit_btn"
+                android:onClick="onClick"
+                android:scrollHorizontally="true"
+                android:textSize="18sp"
+                emojicon:emojiconSize="20sp" />
+
+            <Button
+                android:id="@+id/sendBtn"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/chat_send_icon"
+                android:onClick="onClick"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emoGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="280dp"
+            android:background="@drawable/layout_bg_transparent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:baselineAligned="true"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:weightSum="2" >
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="top"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/stampTab"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@color/text_edit"
+                        android:onClick="onItemClick"
+                        android:text="@string/btn_picture_emo"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="top"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/emotationTab"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="3dp"
+                        android:background="@color/list_background"
+                        android:onClick="onItemClick"
+                        android:text="@string/btn_stamp_emo"
+                        android:textColor="@color/text_edit"
+                        android:textSize="16sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#D9D7D7" />
+
+            <Button
+                android:id="@+id/btn_download_stamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_vertical"
+                android:background="@drawable/download_icon"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:visibility="gone" />
+
+            <GridView
+                android:id="@+id/list_stamp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="top"
+                android:cacheColorHint="#0000"
+                android:columnWidth="70dp"
+                android:numColumns="4"
+                android:scrollbarSize="10dp"
+                android:scrollbarThumbVertical="@drawable/custom_scroll_style" />
+
+            <FrameLayout
+                android:id="@+id/list_emo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chatOptionGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:baselineAligned="true"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_bg_transparent"
+            android:visibility="gone"
+            android:weightSum="3" >
+
+            <FrameLayout
+                android:id="@+id/chatOptionCamera"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:drawableTop="@drawable/chat_camera_icon"
+                    android:gravity="center"
+                    android:text="@string/btn_chatOptionCamera" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/chatOptionPresent"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:background="@drawable/layout_bg_transparent"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:drawableTop="@drawable/chat_present_icon"
+                    android:gravity="center"
+                    android:text="@string/btn_chatOptionPresent" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/chatOptionOther"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:onClick="onClick" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:drawableTop="@drawable/chat_other_option"
+                    android:gravity="center"
+                    android:text="@string/btn_chatOptionOther" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+       <!--  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="4" > -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_weight="1"
+                android:background="#ff3b00"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/notification_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:text="はるこ"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/notification_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="10dip"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:src="@drawable/notification_setting" />
+            </RelativeLayout>
+        <!-- </LinearLayout> -->
+
+        <com.cls.sugutomo.circlarIV.CircularImageView
+            android:id="@+id/notification_avatar"
+            android:layout_width="80dip"
+            android:layout_height="80dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/notifi_dialog_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="1dip"
+        android:scrollbarSize="10dp"
+        android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+        android:scrollbars="vertical" />
+
+    <Button
+        android:id="@+id/notification_dialog_login_to_answear"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/button_press"
+        android:onClick="onClick"
+        android:text="@string/notify_login_to_answear"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/notification_dialog_answear_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="70dip" 
+        android:visibility="gone">
+
+        <com.rockerhieu.emojicon.EmojiconEditText
+            android:id="@+id/notification_edittext"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dip"
+            android:layout_weight="5"
+            android:hint="@string/btn_chatET"
+            android:onClick="onClick"
+            android:scrollHorizontally="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            emojicon:emojiconSize="20sp" />
+
+        <Button
+            android:id="@+id/notification_send"
+            android:layout_width="0dip"
+            android:layout_height="30dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/button_press"
+            android:onClick="onClick"
+            android:src="@drawable/notification_setting"
+            android:text="送信"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_marginTop="2dip"
+        android:background="@color/Lightgray" />
+
+    <LinearLayout
+        android:id="@+id/notification_dialog_btnlayout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="3dip"
+        android:paddingLeft="3dip"
+        android:paddingRight="3dip" >
+
+        <Button
+            android:id="@+id/notifi_go_dismiss"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="45dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="閉じる" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="2dip"
+            android:layout_marginTop="2dip"
+            android:background="@color/Lightgray" />
+
+        <Button
+            android:id="@+id/notifi_go_chat"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="45dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="確認" />
+    </LinearLayout>
+
+</LinearLayout>

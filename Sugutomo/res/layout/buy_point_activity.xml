@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.cls.sugutomo"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="7"
+    tools:ignore="contentDescription" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/buypoint_bgicon"
+            android:orientation="horizontal"
+            android:weightSum="7"
+            tools:ignore="UselessParent" >
+
+            <com.cls.sugutomo.circlarIV.CircularImageView
+                android:id="@+id/buypoint_avatar"
+                android:layout_width="0dip"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:src="@drawable/me_pin"
+                app:border_color="@color/white"
+                app:border_width="0dp"
+                app:shadow="true" />
+
+            <!--
+                 <ImageView
+                android:id="@+id/buypoint_avatar"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                 android:gravity="center"
+                 android:layout_gravity="center_vertical"
+                android:scaleType="fitCenter"
+                android:src="@drawable/me_pin" />
+            -->
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="4.2"
+                android:gravity="center"
+                android:text="@string/buypoint_point_possession"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/buypoint_yourpoint"
+                android:layout_width="0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1.8"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:background="@drawable/buypoint_bggray"
+        android:gravity="center"
+        android:text="@string/buypoint_freeget"
+        android:textColor="@color/white"
+        android:textSize="15sp" /> -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.6"
+        android:background="@color/list_background" >
+
+        <GridView
+            android:id="@+id/buypoint_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:listSelector="#00000000"
+            android:numColumns="4"
+            android:padding="10dp"
+            android:scrollbarSize="10dp"
+            android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dp" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/Lightgray" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/buypoint_currentbuybg"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/buypoiny_devider"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/Lightgray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="50dip"
+            android:layout_toLeftOf="@id/buypoiny_devider"
+            android:gravity="center"
+            android:text="@string/buypoint_cost"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/buypoint_yen"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@id/buypoiny_devider"
+            android:gravity="center"
+            android:text="@string/buypoint_janpan_yen"
+            android:textColor="#EE0000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/buypoint_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@id/buypoint_yen"
+            android:gravity="center"
+            android:textColor="#EE0000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/Lightgray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="NestedWeights" >
+
+        <Button
+            android:id="@+id/buypoint_buybtn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_press"
+            android:onClick="onBuyPoint"
+            android:text="@string/buypoint_text_buy_btn"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.cls.sugutomo"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    tools:ignore="contentDescription" >
+
+    <LinearLayout
+        android:id="@+id/back"
+        style="@style/MyListBackContent"
+        android:tag="back" >
+
+        <Button
+            android:id="@+id/btn_chat_remove"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/remove"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/layout_bg"
+        android:orientation="vertical"
+        android:tag="front" >
+
+        <RelativeLayout
+            android:id="@+id/layout_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp" >
+
+            <com.cls.sugutomo.circlarIV.CircularImageView
+                android:id="@+id/chat_list_avatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginRight="5dp"
+                android:scaleGravity="fill"
+                android:src="@drawable/avatar_defaut_big"
+                app:border_color="@color/white"
+                app:border_width="4dp"
+                app:shadow="true" />
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true" >
+
+                <TextView
+                    android:id="@+id/chat_list_count_message"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/counter_bg"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/layout_avatar"
+            android:orientation="vertical"
+            android:weightSum="10" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:baselineAligned="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/chat_list_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/chat_list_distance"
+                    android:layout_alignParentLeft="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/chat_list_lastTimeChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/chat_list_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/chat_list_lastTimeChat"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:gravity="top"
+                android:orientation="horizontal" >
+
+                <com.rockerhieu.emojicon.EmojiconTextView
+                    android:id="@+id/chat_list_message"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chat_item_left"
+                    android:gravity="top"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    emojicon:emojiconSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/chat_list_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="top"
+                    android:src="@drawable/ic_empty"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

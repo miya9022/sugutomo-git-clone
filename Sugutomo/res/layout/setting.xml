@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#ff0000" >
+
+            <TextView
+                android:id="@+id/chatRecipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Setting"
+                android:textColor="#ffffff"
+                android:textSize="22sp" >
+            </TextView>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="5dp"
+            android:text="Say something to friends"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="10dp"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Status:"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/statusInput"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:hint="new status..." />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Distance to view friends"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="10dp"
+            android:padding="5dp" >
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Radius(Km):"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/radiusInput"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:hint="input distance to find"
+                android:numeric="integer" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="#ee0000"
+            android:onClick="saveClick"
+            android:text="Save"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottombg"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/mapTab"
+                android:layout_width="65dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="#0000"
+                android:onClick="onItemClick"
+                android:paddingBottom="15dip"
+                android:paddingLeft="17dip"
+                android:paddingRight="17dip"
+                android:paddingTop="5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/map_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dip"
+                android:text="Map"
+                android:textColor="#acb3bb"
+                android:textSize="12dip"
+                android:textStyle="bold" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/friendTab"
+                android:layout_width="65dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="#0000"
+                android:onClick="onItemClick"
+                android:paddingBottom="15dip"
+                android:paddingLeft="17dip"
+                android:paddingRight="17dip"
+                android:paddingTop="5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/friend_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dip"
+                android:text="Friend"
+                android:textColor="#acb3bb"
+                android:textSize="12dip"
+                android:textStyle="bold" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:visibility="visible" >
+
+            <ImageButton
+                android:id="@+id/historyTab"
+                android:layout_width="65dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="#0000"
+                android:onClick="onItemClick"
+                android:paddingBottom="15dip"
+                android:paddingLeft="17dip"
+                android:paddingRight="17dip"
+                android:paddingTop="5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/history_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dip"
+                android:text="Chat History"
+                android:textColor="#acb3bb"
+                android:textSize="12dip"
+                android:textStyle="bold" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_weight="1"
+            android:visibility="visible" >
+
+            <ImageButton
+                android:id="@+id/settingTab"
+                android:layout_width="65dip"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/selected"
+                android:onClick="onItemClick"
+                android:paddingBottom="15dip"
+                android:paddingLeft="17dip"
+                android:paddingRight="17dip"
+                android:paddingTop="5dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/setting_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dip"
+                android:text="Setting"
+                android:textColor="#acb3bb"
+                android:textSize="12dip"
+                android:textStyle="bold" >
+            </TextView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/notifyGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#1088c6"
+        android:clickable="true"
+        android:onClick="onClickNotify"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:src="@drawable/letter_icon" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nameNotify"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="truong"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/messageNotify"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="status"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>

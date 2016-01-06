@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:ignore="NestedWeights" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/profile_devider"
+         android:scrollbarSize="10dp"
+            android:scrollbarThumbVertical="@drawable/custom_scroll_style" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/profile_layout_avatar_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dip"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/profile_avatar_container"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        tools:ignore="contentDescription" >
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/profile_pager"
+                            android:layout_width="0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.2" >
+
+                            <ImageView
+                                android:id="@+id/profile_avatar"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/avatar_defaut_big"
+                                android:visibility="gone" />
+                        </android.support.v4.view.ViewPager>
+                    </LinearLayout>
+
+                    <com.cls.sugutomo.viewpagerindicator.CirclePageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="2dip" />
+                    
+                    <Button
+                        android:id="@+id/edit_profile_add_img"
+                        android:layout_width="55dip"
+                        android:layout_height="30dip"
+                        android:adjustViewBounds="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dip"
+                        android:onClick="onClick"
+                        android:background="@drawable/edit_profile_add_img"/>
+                    
+                    <ImageButton
+                        android:id="@+id/edit_profile_remove_img"
+                        android:layout_width="45dip"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="10dip"
+                        android:onClick="onClick"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/deleteimg1"/>
+                        <!-- android:background="@drawable/button_press" -->
+                        
+                    
+                    <ImageButton
+                        android:id="@+id/edit_profile_setAvatar"
+                        android:layout_width="45dip"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/edit_profile_remove_img"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginRight="10dip"
+                        
+                        android:onClick="onClick"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/setavatar"/>
+
+                   
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/edit_profile_wall_status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/edit_profile_status_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:drawableRight="@drawable/edit_status"
+                    android:onClick="onChangeWallStatus"
+                    android:text="@string/edit_profile_default_status"
+                    android:paddingLeft="10dip"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/edit_profile_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_gravity="center"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dip"
+                    android:text="@string/edit_profile_title"
+                    android:textColor="#f69a7f"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/Lightgray" />
+
+                <LinearLayout
+                    android:id="@+id/edit_profile_detail_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                     >
+
+                    <!-- end -->
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/profile_devider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_above="@+id/profile_tab_bot"
+        android:background="@color/Lightgray" />
+
+    <RelativeLayout
+        android:id="@+id/profile_tab_bot"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+         >
+
+        <Button
+            android:id="@+id/btn_create_profile"
+            style="@style/DefaultButtonText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:background="@color/text_edit"
+            android:gravity="center|center_vertical"
+            android:layout_centerInParent="true"
+            android:onClick="onClick"
+            android:text="@string/btn_create_profile"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

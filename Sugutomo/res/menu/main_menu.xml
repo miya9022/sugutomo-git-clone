@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+>
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/btn_notify_message"
+        android:actionLayout="@layout/count_message"
+        android:orderInCategory="1"
+        android:showAsAction="always|withText"
+        android:title="0"/>
+
+</menu>

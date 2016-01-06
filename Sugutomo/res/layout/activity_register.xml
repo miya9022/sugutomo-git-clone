@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:ignore="contentDescription" >
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_back"
+        android:onClick="onClick" />
+
+    <LinearLayout
+        android:id="@+id/register_mail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/register_edittext_mail"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableLeft="@drawable/email"
+            android:hint="@string/register_edittext_mail"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColor="@color/text_edit"
+            android:textColorHint="#bbbbbb" />
+
+        <EditText
+            android:id="@+id/register_edittext_username"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableLeft="@drawable/user"
+            android:hint="@string/register_edittext_username"
+            android:padding="10dp"
+            android:textColor="@color/text_edit"
+            android:textColorHint="#bbbbbb" />
+
+        <EditText
+            android:id="@+id/register_edittext_password"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/edittext_bg"
+            android:drawableLeft="@drawable/password"
+            android:hint="@string/register_edittext_password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/text_edit"
+            android:textColorHint="#bbbbbb" />
+
+        <CheckBox
+            android:id="@+id/register_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center"
+            android:layout_margin="5dp"
+            android:text="@string/register_checkbox"
+            android:textColor="@color/list_background"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/register_btn_signup"
+            style="@style/DefaultButtonText"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical|center"
+            android:layout_margin="4dp"
+            android:background="@drawable/btn_register"
+            android:onClick="onClick"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/register_btn_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <ImageView 
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"/>
+        
+        <com.facebook.widget.LoginButton
+            xmlns:fb="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/btn_fb_register"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/small_round_facebook_icon"
+            android:background="@color/btn_login_fb_bg"
+            android:onClick="onClick"
+            facebook:confirm_logout="false"
+            facebook:fetch_user_info="true"
+            fb:login_text="@string/btn_fb_register"
+            fb:logout_text="@string/btn_fb_logout" />
+
+        <ImageButton
+            android:id="@+id/btn_mail_register"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_mail_register"
+            android:onClick="onClick" />
+    </LinearLayout>
+  <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_term_of_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:padding="5dp"
+                android:text="利用規約"
+                android:textColor="@color/white"
+                android:textSize="14sp" 
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="14dp"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:padding="5dp"
+                android:text="プライバシーポリシー"
+                android:textColor="@color/white"
+                android:textSize="14sp" 
+                />
+        </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.cls.sugutomo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title_register_photo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="@string/title_register_nophoto1"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/title_register_photo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="@string/title_register_nophoto2"
+        android:textSize="18sp" />
+
+    <com.cls.sugutomo.circlarIV.CircularImageView
+        android:id="@+id/avatarIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_vertical|center"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/avatar"
+        app:shadow="true" />
+
+    <Button
+        android:id="@+id/btn_confirm_photo"
+        style="@style/DefaultButtonText"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/text_edit"
+        android:onClick="onClick"
+        android:text="@string/btn_confirm_photo"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_input_fbphoto"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/btn_login_fb_bg"
+        android:drawableLeft="@drawable/fb_icon2"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:text="@string/btn_input_fbphoto"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_input_uploadphoto"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="#0DA8AA"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:onClick="onClick"
+        android:paddingLeft="10dp"
+        android:text="@string/btn_input_uploadphoto"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

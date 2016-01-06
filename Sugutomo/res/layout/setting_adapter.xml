@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="50dip"
+    android:orientation="vertical"
+    tools:ignore="contentDescription" >
+
+    <TextView
+        android:id="@+id/setting_name"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+<!-- limit the sizewith the maxLength attribute, limit it to a single line with maxLines attribute,
+ then use the ellipsize=end to add a "..." 
+ automatically to the end of any line that has been cut-off -->
+    <TextView
+        android:id="@+id/setting_value"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center|right"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_toRightOf="@id/setting_name"
+        android:textColor="@color/black"
+        android:textSize="16sp" 
+        android:layout_marginLeft="10dip"/>
+
+    <TextView
+        android:id="@+id/item_text_buypoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <Button
+            android:id="@+id/setting_on"
+            android:layout_width="70dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/setting_off"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip"
+            android:background="@drawable/button_press"
+            android:onClick="onSettingChange"
+            android:text="@string/setting_on"
+            android:textColor="@color/white"
+            android:focusable="false" />
+    <Button
+            android:id="@+id/setting_off"
+            android:layout_width="70dip"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dip"
+            android:background="@drawable/button_press"
+            android:onClick="onSettingChange"
+            android:text="@string/setting_off"
+            android:textColor="@color/white"
+            android:focusable="false" />
+
+</RelativeLayout>

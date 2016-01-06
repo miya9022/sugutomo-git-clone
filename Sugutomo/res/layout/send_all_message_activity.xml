@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:ignore="contentDescription" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <!--
+             <ImageView
+            android:id="@+id/broastcast_anim_img"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/broastcast_effect4" />
+        -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/broastcast_img" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="@string/broastcast_title"
+            android:textColor="#EE0000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        tools:ignore="NestedWeights" >
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.9"
+            android:gravity="center|left"
+            android:paddingLeft="16dp"
+            android:text="@string/broastcast_sex"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_broastcast_man"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="6dip"
+            android:layout_weight="0.95"
+            android:background="@drawable/button_press_change"
+            android:onClick="onChangeSex"
+            android:text="@string/broastcast_text_men"
+            android:textColor="@drawable/button_press_change_text" />
+
+        <Button
+            android:id="@+id/btn_broastcast_woman"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="6dip"
+            android:layout_weight="0.95"
+            android:background="@drawable/button_press_change"
+            android:onClick="onChangeSex"
+            android:text="@string/broastcast_text_women"
+            android:textColor="@drawable/button_press_change_text" />
+
+        <Button
+            android:id="@+id/btn_broastcast_bolth"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="6dip"
+            android:layout_weight="1.2"
+            android:background="@drawable/button_press_change"
+            android:onClick="onChangeSex"
+            android:text="@string/broastcast_text_both"
+            android:textColor="@drawable/button_press_change_text" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/Lightgray" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:paddingLeft="16dp"
+            android:text="@string/broastcast_totalsend"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_people"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:gravity="center|right"
+            android:paddingRight="26dp"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:text="@string/broastcast_totalsend_defalut"
+            android:background="@drawable/dropdown_more"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/Lightgray" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:paddingLeft="16dp"
+            android:text="@string/broastcast_messgener"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_message"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:gravity="center|right"
+            android:paddingRight="26dp"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:text="@string/broastcast_messgener_hello"
+            android:background="@drawable/dropdown_more"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/Lightgray" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.8"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/broastcast_devider"
+            android:layout_width="1dip"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@color/Lightgray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dip"
+            android:layout_toLeftOf="@id/broastcast_devider"
+            android:gravity="center"
+            android:text="@string/broastcast_cost"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_point"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dip"
+            android:layout_toRightOf="@id/broastcast_devider"
+            android:gravity="center"
+            android:text="@string/broastcast_cost_defalut"
+            android:textColor="#EE0000"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="@color/Lightgray" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        tools:ignore="NestedWeights" >
+
+        <Button
+            android:id="@+id/sendbtn"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:background="@drawable/button_press"
+            android:onClick="onBroastCast"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/broastcast_text_send_btn" />
+    </LinearLayout>
+
+</LinearLayout>

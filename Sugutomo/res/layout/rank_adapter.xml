@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.cls.sugutomo"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="80dp"
+    tools:ignore="contentDescription" >
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/layout_bg"
+        android:orientation="vertical"
+        android:tag="front" >
+
+        <RelativeLayout
+            android:id="@+id/rank_index_container"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp" >
+
+            <TextView
+                android:id="@+id/rank_index_txt"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:textColor="#ff9a9b"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/rank_index_img"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/rank_index_container" >
+
+            <com.cls.sugutomo.circlarIV.CircularImageView
+                android:id="@+id/chat_list_avatar"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:scaleGravity="fill"
+                android:src="@drawable/avatar_defaut_big"
+                app:border_color="@color/white"
+                app:border_width="4dp"
+                app:shadow="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/layout_avatar"
+            android:orientation="vertical"
+            android:weightSum="10" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:baselineAligned="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/chat_list_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginLeft="5dp"
+                     android:layout_marginBottom="7dp"
+                    android:layout_toLeftOf="@+id/rank_list_distance"
+                    android:gravity="bottom"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="18sp"
+                    android:layout_marginRight="10dp"
+                     />
+
+                <TextView
+                    android:id="@+id/rank_lastTimeLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="7dp"
+                    android:gravity="bottom"
+                    android:textColor="#ff9c9c9c"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                     android:layout_alignBaseline="@id/chat_list_name" />
+
+                <TextView
+                    android:id="@+id/rank_list_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignBaseline="@id/chat_list_name"
+                    android:layout_toLeftOf="@+id/rank_lastTimeLogin"
+                    android:gravity="bottom"
+                    android:textColor="#ff9c9c9c"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:gravity="top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/rank_list_message"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chat_item_left"
+                    android:gravity="top"
+                    android:singleLine="true"
+                    android:text="@string/text_name"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

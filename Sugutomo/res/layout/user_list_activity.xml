@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+     >
+
+    <TextView
+        android:id="@+id/app_user"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:text="@string/title_top_appeal"
+        android:textColor="@color/list_background_pressed"
+        android:textSize="14sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.2"
+        android:background="@drawable/layout_bg"
+        android:orientation="vertical" >
+
+        <HorizontalScrollView
+            android:id="@+id/hsScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/horizontalLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <ImageButton
+            android:id="@+id/appeal_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_action_refresh"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:onClick="onClick"
+             >
+        </ImageButton>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/filterUser"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0.3"
+        android:background="@drawable/layout_bg"
+        android:onClick="onClick"
+        android:paddingBottom="4dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/filter_bg"
+            android:drawableRight="@drawable/btn_filter"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="@string/title_filter_user"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.3"
+        android:background="@drawable/layout_bg" >
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="3"
+            android:padding="5dp"
+            android:scrollbarSize="10dp"
+            android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="15dp" />
+          <ImageButton
+            android:id="@+id/user_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_action_refresh"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:onClick="onClick"
+             >
+        </ImageButton>
+
+        <ProgressBar
+            android:id="@+id/loadmorePB"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

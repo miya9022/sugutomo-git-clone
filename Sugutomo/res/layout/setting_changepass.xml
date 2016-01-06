@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:ignore="contentDescription" >
+
+        <EditText
+            android:id="@+id/setting_current_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/edittext_bg"
+            android:ellipsize="start"
+            android:hint="@string/setting_current_pass"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_edit"
+            android:textColorHint="#bbbbbb" />
+
+        <EditText
+            android:id="@+id/setting_new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/edittext_bg"
+            android:ellipsize="start"
+            android:hint="@string/setting_new_pass"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_edit"
+            android:textColorHint="#bbbbbb" />
+
+        <EditText
+            android:id="@+id/setting_repeat_new_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-2dp"
+            android:background="@drawable/edittext_bg"
+            android:ellipsize="start"
+            android:hint="@string/setting_repeat_new_pass"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/text_edit"
+            android:textColorHint="#bbbbbb" />
+    </LinearLayout>
+
